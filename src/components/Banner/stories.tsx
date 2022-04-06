@@ -4,8 +4,13 @@ import Banner, { BannerProps } from '.'
 export default {
   title: 'Banner',
   component: Banner,
+  argTypes: {
+    ribbon: {
+      type: 'string'
+    }
+  },
   args: {
-    img: 'https://source.unsplash.com/random',
+    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
     title: 'Defy Death',
     subtitle: '<p>Play the new <strong>Crashlands</strong> season</p>',
     buttonLabel: 'Buy Now',
@@ -16,4 +21,20 @@ export default {
   }
 } as Meta
 
-export const Basic: Story<BannerProps> = (args) => <Banner {...args} />
+export const Basic: Story<BannerProps> = (args) => (
+  <div style={{ maxWidth: '104rem', margin: '0 auto'}}>
+    <Banner {...args} />
+  </div>
+)
+
+export const WithRibbon: Story<BannerProps> = (args) => (
+  <div style={{ maxWidth: '104rem' }}>
+    <Banner {...args} />
+  </div>
+)
+
+WithRibbon.args = {
+  ribbon: '20% OFF',
+  ribbonSize: 'normal',
+  ribbonColor: 'primary'
+}
