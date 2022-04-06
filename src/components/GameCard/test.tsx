@@ -25,9 +25,7 @@ describe('<GameCard />', () => {
       screen.getByRole('heading', { name: props.developer })
     ).toBeInTheDocument()
 
-    expect(
-      screen.getByRole('img', { name: props.title })
-    ).toHaveAttribute(
+    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',
       props.img
     )
@@ -42,7 +40,7 @@ describe('<GameCard />', () => {
 
     expect(price).not.toHaveStyle({ textDecoration: 'line-through' })
     expect(price).toHaveStyle({ backgroundColor: theme.colors.secondary })
-  });
+  })
 
   it('should render a line-through in price when promotional', () => {
     renderWithTheme(<GameCard {...props} promotionalPrice="R$: 133,33" />)

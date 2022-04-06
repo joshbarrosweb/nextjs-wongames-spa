@@ -18,9 +18,13 @@ describe('<Highlight />', () => {
   it('should render the colors correctly', () => {
     renderWithTheme(<Highlight {...props} />)
 
-    expect(screen.getByRole('heading', { name: /heading 1/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /heading 1/i })
+    ).toBeInTheDocument()
 
-    expect(screen.getByRole('heading', { name: /heading 2/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /heading 2/i })
+    ).toBeInTheDocument()
 
     expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument()
   })
@@ -50,27 +54,23 @@ describe('<Highlight />', () => {
       "'floatimage content'"
     )
 
-    expect(container.firstChild).toHaveStyleRule(
-      'text-align',
-      'right', {
-        modifier: `${S.Content}`
-      }
-    )
+    expect(container.firstChild).toHaveStyleRule('text-align', 'right', {
+      modifier: `${S.Content}`
+    })
   })
 
   it('should render align left by default', () => {
-    const { container } = renderWithTheme(<Highlight {...props} alignment="left" />)
+    const { container } = renderWithTheme(
+      <Highlight {...props} alignment="left" />
+    )
 
     expect(container.firstChild).toHaveStyleRule(
       'grid-template-areas',
       "'content floatimage'"
     )
 
-    expect(container.firstChild).toHaveStyleRule(
-      'text-align',
-      'left', {
-        modifier: `${S.Content}`
-      }
-    )
+    expect(container.firstChild).toHaveStyleRule('text-align', 'left', {
+      modifier: `${S.Content}`
+    })
   })
 })

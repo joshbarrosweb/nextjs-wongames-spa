@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2';
-import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart';
-import { Search as SearchIcon } from '@styled-icons/material-outlined/Search';
-import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
+import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
+import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
+import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
+import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import MediaMatch from '../MediaMatch'
 import Logo from '../Logo'
@@ -16,7 +16,7 @@ export type MenuProps = {
 
 const Menu = ({ username }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
-  
+
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
@@ -26,14 +26,14 @@ const Menu = ({ username }: MenuProps) => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Logo hideOnMobile/>
+        <Logo hideOnMobile />
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
           <S.MenuLink href="#">Explore</S.MenuLink>
-        </S.MenuNav>        
+        </S.MenuNav>
       </MediaMatch>
 
       <S.MenuGroup>
@@ -66,17 +66,16 @@ const Menu = ({ username }: MenuProps) => {
         </S.MenuNav>
 
         {!username && (
-         <S.RegisterBox>
-           <Button fullWidth size="large">
-             Log In
-           </Button>
-             <span>or</span>
-           <S.CreateAccount href="#" title="Sign In">
+          <S.RegisterBox>
+            <Button fullWidth size="large">
+              Log In
+            </Button>
+            <span>or</span>
+            <S.CreateAccount href="#" title="Sign In">
               Sign Up
-           </S.CreateAccount>
-         </S.RegisterBox>
+            </S.CreateAccount>
+          </S.RegisterBox>
         )}
-
       </S.MenuFull>
     </S.Wrapper>
   )

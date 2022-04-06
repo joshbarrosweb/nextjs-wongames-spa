@@ -16,8 +16,13 @@ export const Heading = ({
   lineBottom = false,
   size = 'medium'
 }: HeadingProps) => (
-  <S.Wrapper color={color} lineLeft={lineLeft} lineBottom={lineBottom} size={size}>
-    { children }
+  <S.Wrapper
+    color={color}
+    lineLeft={lineLeft}
+    lineBottom={lineBottom}
+    size={size}
+  >
+    {children}
   </S.Wrapper>
 )
 

@@ -6,19 +6,19 @@ export type WrapperProps = {
 } & Pick<ButtonProps, 'size' | 'fullWidth'>
 
 const wrapperModifiers = {
-  small: (theme: DefaultTheme) => css `
+  small: (theme: DefaultTheme) => css`
     height: 3rem;
     font-size: ${theme.font.sizes.xsmall};
   `,
-  medium: (theme: DefaultTheme) => css `
+  medium: (theme: DefaultTheme) => css`
     height: 4rem;
     font-size: ${theme.font.sizes.small};
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.medium}
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
   `,
-  large: (theme: DefaultTheme) => css `
+  large: (theme: DefaultTheme) => css`
     height: 5rem;
     font-size: ${theme.font.sizes.medium};
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge}
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
   `,
   fullWidth: () => css`
     width: 100%;

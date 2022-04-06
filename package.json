@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --max-warnings=0",
+    "lint": "eslint --fix --max-warnings=0",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "test:clearcache": "yarn test --clearCache",
@@ -21,8 +21,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test -findRelatedTests --bail"
+      "yarn lint --fix"
     ]
   },
   "dependencies": {
@@ -30,6 +29,7 @@
     "next-pwa": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
     "styled-components": "^5.3.3",
     "styled-icons": "^10.45.0",
     "styled-media-query": "^2.1.2"
@@ -43,6 +43,7 @@
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.34",
+    "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.15",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",

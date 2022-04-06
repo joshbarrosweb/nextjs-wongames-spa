@@ -1,4 +1,8 @@
-import { AddShoppingCart, Favorite, FavoriteBorder } from '@styled-icons/material-outlined'
+import {
+  AddShoppingCart,
+  Favorite,
+  FavoriteBorder
+} from '@styled-icons/material-outlined'
 
 import Ribbon, { RibbonColors, RibbonSizes } from '../Ribbon'
 import Button from '../Button'
@@ -41,18 +45,22 @@ const GameCard = ({
       <img src={img} alt={title} />
     </S.ImageBox>
     <S.Content>
-    <S.Info>
-      <S.Title>{title}</S.Title>
-      <S.Developer>{developer}</S.Developer>
-    </S.Info>
-    <S.FavButton onClick={onFavorite} role="button">
-      {favorite ? <Favorite aria-label="Remove from Wishlist" /> : <FavoriteBorder aria-label="Add to Wishlist" /> }
-    </S.FavButton>
-    <S.BuyBox>
-      {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
-      <S.Price>{promotionalPrice || price}</S.Price>
-      <Button icon={<AddShoppingCart />} size="small" />
-    </S.BuyBox>
+      <S.Info>
+        <S.Title>{title}</S.Title>
+        <S.Developer>{developer}</S.Developer>
+      </S.Info>
+      <S.FavButton onClick={onFavorite} role="button">
+        {favorite ? (
+          <Favorite aria-label="Remove from Wishlist" />
+        ) : (
+          <FavoriteBorder aria-label="Add to Wishlist" />
+        )}
+      </S.FavButton>
+      <S.BuyBox>
+        {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
+        <S.Price>{promotionalPrice || price}</S.Price>
+        <Button icon={<AddShoppingCart />} size="small" />
+      </S.BuyBox>
     </S.Content>
   </S.Wrapper>
 )

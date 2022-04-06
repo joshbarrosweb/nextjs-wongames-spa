@@ -22,7 +22,7 @@ export default {
 } as Meta
 
 export const Basic: Story<BannerProps> = (args) => (
-  <div style={{ maxWidth: '104rem', margin: '0 auto'}}>
+  <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
     <Banner {...args} />
   </div>
 )

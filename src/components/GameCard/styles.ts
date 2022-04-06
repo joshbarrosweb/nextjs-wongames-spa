@@ -20,7 +20,7 @@ export const ImageBox = styled.div`
     #f6f7f8 0%,
     #edeef1 20%,
     #f6f7f8 40%,
-    #f6f7f8 100%,
+    #f6f7f8 100%
   );
   background-size: 80rem 14rem;
   animation: placeholderShimmer 1s linear infinite forwards;
@@ -114,7 +114,7 @@ const priceModifiers = {
     color: ${theme.colors.gray};
     text-decoration: line-through;
     margin-right: ${theme.spacings.xsmall};
-  `,
+  `
 }
 
 export const Price = styled.div<PriceProps>`

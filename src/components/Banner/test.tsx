@@ -23,14 +23,13 @@ describe('<Banner />', () => {
       screen.getByRole('heading', { name: /Play the new Crashlands season/i })
     ).toBeInTheDocument()
 
-    expect(
-      screen.getByRole('img', { name: /Defy Death/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /Defy Death/i })).toBeInTheDocument()
   })
 
   it('should render a Ribbon', () => {
     renderWithTheme(
-      <Banner {...props}
+      <Banner
+        {...props}
         ribbon="20% off"
         ribbonSize="small"
         ribbonColor="secondary"

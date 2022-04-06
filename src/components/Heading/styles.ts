@@ -20,12 +20,12 @@ const wrapperModifiers = {
     `}
   `,
 
-  lineLeft: (theme: DefaultTheme) => css `
+  lineLeft: (theme: DefaultTheme) => css`
     padding-left: ${theme.spacings.xxsmall};
     border-left: 0.7rem solid ${theme.colors.secondary};
   `,
 
-  lineBottom: (theme: DefaultTheme) => css `
+  lineBottom: (theme: DefaultTheme) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
 
@@ -41,7 +41,7 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, color, lineLeft, lineBottom, size }) => css `
+  ${({ theme, color, lineLeft, lineBottom, size }) => css`
     color: ${theme.colors[color!]};
 
     ${!!size && wrapperModifiers[size](theme)}

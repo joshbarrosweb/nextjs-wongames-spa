@@ -26,7 +26,7 @@ const wrapperModifiers = {
     ${FloatImage} {
       justify-self: end;
     }
-  `,
+  `
 }
 
 export const Wrapper = styled.section<WrapperProps>`
@@ -67,7 +67,7 @@ export const FloatImage = styled.img`
       max-height: 32rem;
     `}
   `}
-`;
+`
 
 export const Content = styled.div`
   ${({ theme }) => css`

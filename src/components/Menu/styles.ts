@@ -82,7 +82,7 @@ export const MenuLink = styled.a`
 `
 
 type MenuFullProps = {
-    isOpen: boolean
+  isOpen: boolean
 }
 
 export const MenuFull = styled.nav<MenuFullProps>`
