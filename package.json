@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix --max-warnings=0",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "test:clearcache": "yarn test --clearCache",
@@ -21,7 +22,9 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint --fix",
+      "yarn typecheck",
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {

@@ -16,6 +16,9 @@ export const Footer = () => (
       </S.Column>
 
       <S.Column>
+        <Heading color="black" size="small" lineBottom>
+          Social Media
+        </Heading>
         <nav aria-labelledby="social media">
           <a>Instagram</a>
           <a>Twitter</a>

@@ -1,32 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import BannerSlider, { BannerSliderProps } from '.'
 
-const items = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy Death 1',
-    subtitle: 'Description...',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Best-selling'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy Death 2',
-    subtitle: 'Description...',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Best-selling'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy Death 3',
-    subtitle: 'Description...',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Best-selling'
-  }
-]
+import items from './mock'
 
 export default {
   title: 'BannerSlider',
@@ -35,7 +10,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as Meta
